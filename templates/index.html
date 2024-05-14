@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pneumonia Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <style>
+        /* Style for the menu icon */
+        .menu-icon {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 9999; /* Ensure it's on top */
+            cursor: pointer;
+            background-color: #343a40; /* Match header background color */
+            padding: 10px;
+            border-radius: 50%; /* Makes it round */
+        }
+        /* Style for the menu */
+        .menu {
+            position: fixed;
+            top: 60px; /* Adjust based on header height */
+            left: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            display: none; /* Initially hidden */
+        }
+        /* Style for menu links */
+        .menu a {
+            display: block;
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- Menu Icon -->
+    <div class="menu-icon" onclick="toggleMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+        </svg>
+    </div>
+    
+    <!-- Menu -->
+    <div class="menu" id="menu">
+        <a href="/documentation">Documentation</a>
+        <a href="/about-us">About Us</a>
+    </div>
+
+    <header>
+        <h1>Pneumonia Detection</h1>
+    </header>
+    <main>
+        <div class="container">
+            <input type="file" id="imageUpload" accept="image/*">
+            <button onclick="detectPneumonia()">Detect Pneumonia</button>
+            <div id="result"></div>
+            <div id="medicinesContainer"></div> <!-- Container for filtered medicines -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Pneumonia Detection App</p>
+    </footer>
+
+    <script>
+        // JavaScript function to toggle the menu
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

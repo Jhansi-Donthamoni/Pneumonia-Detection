@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pneumonia Detection Documentation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='documentation.css') }}">
+</head>
+<body>
+    <header>
+        <h1>File Documentation</h1>
+    </header>
+
+    <body>
+        <header>
+            <h1>File Documentation</h1>
+        </header>
+    
+        <main>
+            <section id="app-py">
+                <h2>app.py</h2>
+                <p>Purpose: Main Python script for the Flask application, handling HTTP requests and integrating the machine learning model.</p>
+                <p>Contents:</p>
+                <ul>
+                    <li>Import statements for necessary modules (Flask, Keras, TensorFlow, etc.).</li>
+                    <li>Definition of the Flask application (app).</li>
+                    <li>Loading of the trained machine learning model (chest_xray_2.h5).</li>
+                    <li>Route definitions for the home page (/), prediction endpoint (/predict), and medication retrieval endpoint (/medications).</li>
+                    <li>Functions to render the home page (index()), handle predictions (predict()), and retrieve medications (get_medications()).</li>
+                </ul>
+                <p>Usage: Run this script to start the Flask application and access it via a web browser.</p>
+            </section>
+    
+            <section id="medicines-py">
+                <h2>medicines.py</h2>
+                <p>Purpose: Contains the MedicineFilter class, responsible for filtering medications based on criteria from a CSV file.</p>
+                <p>Contents:</p>
+                <ul>
+                    <li>Import statement for the csv module.</li>
+                    <li>Definition of the MedicineFilter class with methods to initialize the class and filter medications.</li>
+                </ul>
+                <p>Usage: Import this class in app.py to filter medications based on certain conditions.</p>
+            </section>
+    
+            <section id="styles-css">
+                <h2>styles.css</h2>
+                <p>Purpose: Cascading Style Sheets (CSS) file defining the visual appearance and layout of HTML elements.</p>
+                <p>Contents:</p>
+                <ul>
+                    <li>Styles for various HTML elements, including fonts, colors, padding, margins, and layout.</li>
+                </ul>
+                <p>Usage: Linked in HTML files to style the content and layout of web pages.</p>
+            </section>
+    
+            <section id="index-html">
+                <h2>index.html</h2>
+                <p>Purpose: HTML template for the home page of the Pneumonia Detection application.</p>
+                <p>Contents:</p>
+                <ul>
+                    <li>Header section with the application title.</li>
+                    <li>Main section containing file upload functionality, result display area, and medications container.</li>
+                    <li>Footer section with copyright information.</li>
+                </ul>
+                <p>Usage: Rendered by the Flask application to display the home page in the web browser.</p>
+            </section>
+    
+            <section id="documentation-html">
+                <h2>documentation.html</h2>
+                <p>Purpose: HTML template for the documentation page of the Pneumonia Detection application.</p>
+                <p>Contents:</p>
+                <ul>
+                    <li>Header section with the documentation title.</li>
+                    <li>Main section containing various sections such as Introduction, Installation, Usage, Features, and Deployment.</li>
+                    <li>Footer section with copyright information.</li>
+                </ul>
+                <p>Usage: Rendered by the Flask application to display the documentation page in the web browser.</p>
+            </section>
+        </main>
+    
+        <footer>
+            <p>&copy; 2024 Pneumonia Detection App</p>
+        </footer>
+    </body>
+    </html>
